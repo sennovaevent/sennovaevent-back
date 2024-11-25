@@ -16,11 +16,7 @@ const uploadMiddleware = multer({ storage });
 app.use(uploadMiddleware.any());
 
 
-app.enableCors({
-  origin: '*',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-});
+app.enableCors();
   app.useGlobalPipes(new ValidationPipe());
   // Aumenta el límite de tamaño de la entidad de la solicitud a 10MB
   app.use(bodyParser.json({ limit: '10mb' }));
