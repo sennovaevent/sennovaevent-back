@@ -25,6 +25,7 @@ app.enableCors();
  
  // Puerto dinámico para Vercel
  const port = process.env.PORT || 3000;
+ console.log(`Servidor escuchando en el puerto ${port}`);
  await app.listen(port);
 }
 bootstrap();
